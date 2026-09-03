@@ -1,13 +1,11 @@
 CXX = g++
 
-BINS = server client
+BINS = game
 
 all: $(BINS)
 
-server: server.cpp
-	$(CXX) -o server server.cpp -pthread
-client: client.cpp
-	$(CXX) -o client client.cpp -pthread
+game: game.cpp
+	$(CXX) -o game game.cpp -pthread
 
 clean:
 	rm -f $(BINS)
